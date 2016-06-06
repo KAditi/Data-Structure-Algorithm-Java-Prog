@@ -1,0 +1,16 @@
+package com.example.stack.problems;
+
+public class MyStackImplementation {
+	
+	int[] stackArray;
+	int top;
+	int stackSize;
+	
+	public MyStackImplementation(int size)
+	{
+		stackSize = size;
+		top = -1;
+		stackArray = new int[stackSize];
+	}
+
+}

@@ -1,0 +1,51 @@
+package com.example.stack.problems;
+
+import java.util.StringTokenizer;
+
+public class EvaluateInfixExpression {
+	
+	public String evaluateInfix(String expression)
+	{
+		expression = expression.replaceAll("\\s+","");
+		String resultStr = "";
+		MyGenericStack<String> newStack = new MyGenericStack<String>(expression.length());
+		StringTokenizer strTokenize = new StringTokenizer(expression,"{}()*+-/",true);
+		try{
+			while(strTokenize.hasMoreTokens())
+			{
+				String token = strTokenize.nextToken();
+				if(token == "(" || token == "{" || token == "[0-9]+"||token == "*"||token == "/" || token == "+" || token == "-")
+					newStack.push(token);
+				else if(token == "}" || token == ")")
+				{
+					int operant2 = Integer.parseInt(newStack.pop());
+					String operand = newStack.pop();
+					int operant1 = Integer.parseInt(newStack.pop());
+					if(!newStack.isStackEmpty()){
+	                        newStack.pop();
+	                }
+					int result = 0;
+					if(operand.equals("*"))
+						result = operant1 * operant2;
+					else if(operand.equals("+"))
+						result = operant1 * operant2;
+					else if(operand.equals("/"))
+						result = operant1 * operant2;
+					else if(operand.equals("-"))
+						result = operant1 * operant2;
+					newStack.push(String.valueOf(result));
+				}
+			}
+			
+			resultStr = newStack.pop();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+
+}
+

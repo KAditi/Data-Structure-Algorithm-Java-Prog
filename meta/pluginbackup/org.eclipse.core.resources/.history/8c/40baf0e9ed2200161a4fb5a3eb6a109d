@@ -1,0 +1,118 @@
+package com.example.binary.tree.problem;
+
+public class TreeFunction {
+	
+	private Node root;
+	//Function to find node 
+	public Node findNode(int key)
+	{
+		Node currNode = root;
+		
+		while(currNode.getData() != key)
+		{
+			if(key <currNode.getData())
+			{
+				currNode  = currNode.getLeftChild();
+			}
+			else if(key > currNode.getData())
+			{
+				currNode = currNode.getRightChild();
+			}			
+		}
+		return currNode;
+	}
+	
+	public void insertNode(int data)
+	{
+		Node newNode = new Node(data);
+		
+		Node currNode ;
+		
+		if(root == null)
+		{
+			root = newNode;
+		}
+		else
+		{
+			currNode = root;
+			Node parent;
+			while(true)
+			{
+				parent = currNode;
+				
+				if(data < currNode.getData())
+				{
+					currNode = currNode.getLeftChild();
+					if(currNode == null)
+					{
+						parent.setLeftChild(newNode);
+						return;
+					}
+				}
+				else
+				{
+					currNode = currNode.getRightChild();
+					if(currNode == null)
+					{
+						parent.setRightChild(newNode);
+						return;
+					}
+				}
+			}		
+		}		
+	}
+	
+	public void inOrderTraversal(Node localRoot)
+	{
+		if(localRoot != null)
+		{
+			inOrderTraversal(localRoot.getLeftChild());
+			System.out.println(" "+localRoot.getData());
+			inOrderTraversal(localRoot.getRightChild());
+		}
+	}
+	
+	public void preOrderTraversal(Node localRoot)
+	{
+		if(localRoot !=null)
+		{
+			System.out.println(" "+localRoot.getData());
+			preOrderTraversal(localRoot.getLeftChild());
+			preOrderTraversal(localRoot.getRightChild());
+		}
+	}
+	
+	public void postOrderTraversal(Node localRoot)
+	{
+		if(localRoot != null)
+		{
+			postOrderTraversal(localRoot.getLeftChild());
+			postOrderTraversal(localRoot.getRightChild());
+			System.out.println(" "+localRoot.getData());
+		}
+	}
+	
+	public Node findMinimum()
+	{
+		Node currNode, lastNode=null;
+		currNode = root;
+		while(currNode != null)
+		{
+			lastNode = currNode;
+			currNode = currNode.getLeftChild();
+		}
+		return lastNode;
+	}
+	
+	public Node findMaximum()
+	{
+		Node currNode,lastNode = null;
+		currNode = root;
+		while(currNode != null)
+		{
+			lastNode = currNode;
+			currNode = currNode.getRightChild();
+		}
+	}
+
+}

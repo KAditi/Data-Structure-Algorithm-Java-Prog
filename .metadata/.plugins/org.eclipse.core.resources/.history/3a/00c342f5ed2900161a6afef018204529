@@ -1,0 +1,208 @@
+package com.example.binary.tree.operations;
+
+public class BTMethods {
+	BinaryTreeNode root;
+	
+	public void addNode(int data)
+	{
+		BinaryTreeNode newNode = new BinaryTreeNode(data);
+		
+		if(root == null)
+		{
+			root = newNode;
+		}
+		else
+		{
+			BinaryTreeNode currNode = root;
+			BinaryTreeNode parent;
+			while(true)
+			{
+				parent = currNode;
+				if(data < currNode.data)
+				{
+					currNode = currNode.left;
+					if(currNode == null)
+					{
+						parent.left = newNode;
+						return;
+						
+					}
+				}
+				else
+				{
+					currNode = currNode.right;
+					if(currNode == null)
+					{
+						parent.right = newNode;
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	public void inOrderTraverse(BinaryTreeNode node)
+	{
+		if(node != null)
+		{
+			inOrderTraverse(node.left);
+			System.out.print("\t"+node.data);
+			inOrderTraverse(node.right);
+		}
+	}
+	public void  preOrderTraversal(BinaryTreeNode node)
+	{
+		if(node!= null)
+		{
+			System.out.print("\t"+node.data);
+			preOrderTraversal(node.left);
+			preOrderTraversal(node.right);
+		}
+	}
+	public void postOrderTraversal(BinaryTreeNode node)
+	{
+		if(node != null)
+		{
+			postOrderTraversal(node.left);
+			postOrderTraversal(node.right);
+			System.out.print("\t"+node.data);
+		}
+	}
+	
+	public BinaryTreeNode findNode(int key)
+	{
+		BinaryTreeNode currNode = root;
+		while(currNode.data != key)
+		{
+			if(key < currNode.data)
+			{
+				currNode = currNode.left;
+			}
+			else
+			{
+				currNode = currNode.right;
+			}
+			if(currNode == null)
+				return null;
+		}
+		return currNode;
+	}
+	
+	public boolean remove(int key)
+	{
+		BinaryTreeNode currNode = root;
+		BinaryTreeNode parent = root;
+		boolean isALeftChild = true;
+		
+		while(currNode.data != key)
+		{
+			parent = currNode;
+			if(key < currNode.data)
+			{
+				isALeftChild = true;
+				currNode = currNode.left;
+			}
+			else
+			{
+				isALeftChild = false;
+				currNode = currNode.right;
+				
+			}
+			if(currNode == null)
+				return false;
+			if(currNode.left == null && currNode.right == null)
+			{
+				if(currNode == root)
+				{
+					root = null;
+				}
+				else if(isALeftChild)
+				{
+					parent.left = null;
+				}
+				else
+				{
+					parent.right = null;
+				}
+					
+			}
+			else if(currNode.right == null)
+			{
+				if(currNode == root)
+				{
+					root = currNode.left;
+				}
+				else if(isALeftChild)
+				{
+					parent.left = currNode.left;
+				}
+				else
+				{
+					parent.right = currNode.left;
+				}
+					
+			}
+			else if(currNode.left == null)
+			{
+				if(currNode == root)
+					currNode = currNode.right;
+				else if(isALeftChild)
+					parent.left = currNode.right;
+				else
+					parent.right = currNode.left;
+			}
+			
+			else
+			{
+				BinaryTreeNode node = getReplacementNode(currNode);
+				if(currNode == root)
+					currNode = node;
+				else if(isALeftChild)
+					parent.left = node;
+				else 
+					parent.right= node;
+				
+			}
+		}
+		
+		
+	}
+	
+	public static void main(String[] args){
+		
+		BTMethods object = new BTMethods();
+		object.addNode(10);
+		object.addNode(7);
+		object.addNode(12);
+		object.addNode(11);
+		object.addNode(13);
+		object.addNode(5);
+		object.addNode(6);
+		object.addNode(4);
+		object.addNode(9);
+		
+		System.out.println("\n");
+		System.out.println("In Order Traversal");
+		System.out.println("\n");
+		object.inOrderTraverse(object.root);
+		System.out.println("\n");
+		System.out.println("Pre Order Traversal");
+		object.preOrderTraversal(object.root);
+		System.out.println("\n");
+		System.out.println("Post Order Traversal");
+		
+		object.postOrderTraversal(object.root);
+		
+		BinaryTreeNode temp = object.findNode(89);
+		if(temp != null)
+		{
+			System.out.println("Node is found");
+		}
+		else
+		{
+			System.out.println("Node does not found");
+		}
+	}
+	
+
+}

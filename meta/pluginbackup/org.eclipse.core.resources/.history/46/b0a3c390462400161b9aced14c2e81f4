@@ -1,0 +1,84 @@
+package com.example.sort.algorithm;
+
+public class SortingAlgo {
+
+	public static void main(String[] args) {
+		
+		int[] inputArray = {3,1,6,2,4,6,4,9,10};
+		SortingAlgo obj = new SortingAlgo();
+		obj.bubbleSort(inputArray);
+		for(int i=0;i<inputArray.length;i++)
+		{
+			System.out.print("\t"+inputArray[i]);
+		}
+		//obj.insertionSort(new int[]{3,1,6,2,4,6,4,9,10});
+		obj.selectionSort(new int[]{3,1,6,2,4,6,4,9,10});
+		
+	}
+	
+	public void bubbleSort(int[] inputArray)
+	{
+		for(int i=0;i<inputArray.length;i++)
+		{
+			for(int j=i ; j<inputArray.length;j++)
+			{
+				if(inputArray[i]>inputArray[j])
+				{
+					int temp = inputArray[i];
+					inputArray[i] = inputArray[j];
+					inputArray[j]= temp;
+							
+				}
+			}
+		}
+		
+	}
+	
+	public void insertionSort(int[] inputArray)
+	{
+		int i,j=0,value;
+		for(i=1;i<inputArray.length;i++)
+		{
+			value = inputArray[i];
+			j=i;
+			while(inputArray[j-1]>value && j>0)
+			{
+				//int temp = inputArray[j];
+				//inputArray[j]= inputArray[j-1];
+				//inputArray[j-1]= temp;	
+				inputArray[j] = inputArray[j-1];
+				j--;
+			}
+			inputArray[j]=value;
+			
+		}
+		System.out.println("");
+		System.out.println("Insertion sort");
+		for(int m=0;m<inputArray.length;m++)
+		{
+			System.out.print("\t"+inputArray[m]);
+		}
+	}
+	
+	public void selectionSort(int[] arrayToSort)
+	{
+		for(int i=0;i<arrayToSort.length;i++)
+		{
+			int position = i;
+			for(int j=i+1;j<arrayToSort.length;j++)
+			{
+				if(arrayToSort[j]<arrayToSort[position])
+					position = j;
+			}
+			int temp = arrayToSort[position];
+			arrayToSort[position] = arrayToSort[i];
+			arrayToSort[i] = temp;
+		}
+		System.out.println("Selection sort");
+		for(int m=0;m<arrayToSort.length;m++)
+		{
+			System.out.print("\t"+arrayToSort[m]);
+		}
+		
+	}
+}

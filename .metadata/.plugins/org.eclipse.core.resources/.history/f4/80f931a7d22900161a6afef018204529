@@ -1,0 +1,47 @@
+package com.example.binary.tree.operations;
+
+public class BTOperations {
+	
+	public BinaryTreeNode root;
+	
+	public void insertNode(int data)
+	{
+		BinaryTreeNode tempNode = new BinaryTreeNode(data);
+		BinaryTreeNode currNode;
+		
+		if(root == null)
+		{
+			root = tempNode;
+		}
+		else
+		{
+			currNode = root;
+			BinaryTreeNode parent;
+			while(true)
+			{
+				parent = currNode;
+				if(data < currNode.getData())
+				{
+					currNode = currNode.getLeft();
+					if(currNode == null)
+					{
+						parent.setLeft(tempNode);
+						return;
+					}
+				}
+				else
+				{
+					currNode = currNode.getRight();
+					if(currNode == null)
+					{
+						parent.setRight(tempNode);
+						return;
+					}
+				}
+				
+			}
+		}
+		
+	}
+
+}

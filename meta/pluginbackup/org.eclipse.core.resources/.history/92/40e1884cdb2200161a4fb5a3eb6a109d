@@ -1,0 +1,9 @@
+package com.example.binary.tree.problem;
+
+public class Node {
+	
+	int data;
+	Node leftChild;
+	Node rightChild;
+
+}

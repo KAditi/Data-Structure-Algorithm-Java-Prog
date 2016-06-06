@@ -1,0 +1,130 @@
+package com.example.binary.tree.operations;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class BTOperations {
+	
+	public BinaryTreeNode root;
+	
+	public void insertNode(int data)
+	{
+		BinaryTreeNode tempNode = new BinaryTreeNode(data);
+		//BinaryTreeNode currNode;
+		
+		if(root == null)
+		{
+			root = tempNode;
+		}
+		else
+		{
+			BinaryTreeNode currNode = root;
+			BinaryTreeNode parent;
+			while(true)
+			{
+				parent = currNode;
+				if(data < currNode.getData())
+				{
+					currNode = currNode.left;
+					if(currNode == null)
+					{
+						parent.left = tempNode;
+						return;
+					}
+				}
+				else
+				{
+					currNode = currNode.right;
+					if(currNode == null)
+					{
+						parent.setRight(tempNode);
+						return;
+					}
+				}
+				
+			}
+		}
+		
+	}
+	
+	public void insertData(BinaryTreeNode root, int data)
+	{
+		if(root == null)
+		{
+			
+		}
+	}
+	
+	public ArrayList<Integer> inorderNRTraversal(BinaryTreeNode root)
+	{
+		ArrayList<Integer> nodeVal = new ArrayList<Integer>();
+		Stack<BinaryTreeNode> stackNode = new Stack<BinaryTreeNode>();
+		BinaryTreeNode currNode = root;
+		boolean done = false;
+		if(root == null)
+		{
+			System.out.println("Tree is null");
+			return null;
+		}
+		
+		while(!done)
+		{
+			if(currNode!= null)
+			{
+				stackNode.push(currNode);
+				currNode = currNode.getLeft();
+			}
+			else
+			{
+				if(stackNode.isEmpty())
+				{
+					done = true;
+				}
+				else
+				{
+					currNode = stackNode.pop();
+					nodeVal.add(currNode.getData());
+					currNode = currNode.getRight();
+					
+				}
+			}
+			
+		}
+		return nodeVal;
+	}
+	
+	public void inOrderTrversalRec(BinaryTreeNode localRoot)
+	{
+		if(localRoot!=null)
+		{
+			inOrderTrversalRec(localRoot.getLeft());
+			System.out.print("\t"+localRoot.getData());
+			inOrderTrversalRec(localRoot.getRight());
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		BTOperations node = new BTOperations();
+		node.insertNode(10);
+		node.insertNode(7);
+		node.insertNode(12);
+		node.insertNode(11);
+		node.insertNode(13);
+		node.insertNode(5);
+		node.insertNode(6);
+		node.insertNode(4);
+		node.insertNode(9);
+		
+		/*ArrayList<Integer> result = node.inorderNRTraversal(node.root);
+		System.out.println("Inorder Non recursive output");
+		System.out.println("\n");
+		for(int i=0;i< result.size();i++)
+		{
+			System.out.print("\t"+result.get(i));
+		}*/
+		
+		node.inOrderTrversalRec(node.root);
+	}
+
+}

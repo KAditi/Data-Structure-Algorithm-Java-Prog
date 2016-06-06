@@ -1,0 +1,42 @@
+package com.example.binary.search;
+
+import java.util.Arrays;
+
+public class BinarySearchValue {
+	
+	public int binarySearchValueRec(int[] array, int start,int end,int value)
+	{
+		
+		int mid = (start+end)/2;
+		int result = -1;
+		
+		Arrays.sort(array);
+		
+		if(array[mid] == value)
+			return mid;
+		else if(array[mid]>value)
+			result = binarySearchValueRec(array, start, mid,value);
+		else
+			result = binarySearchValueRec(array, mid, end, value);
+		
+		return result;		
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		BinarySearchValue object = new BinarySearchValue();
+		int[] array = {2,3,4,5,7,8,9,10};
+		int result = object.binarySearchValueRec(array, 0, array.length, 10);
+		if(result != -1)
+		{
+			System.out.println("Value found at:\t"+result);
+		}
+		else
+		{
+			System.out.println("Value not found");
+		}
+		
+	}
+
+}

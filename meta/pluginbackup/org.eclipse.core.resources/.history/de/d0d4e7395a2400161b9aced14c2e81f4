@@ -1,0 +1,75 @@
+package com.example.stack.problems;
+
+public class MyStackImplementation {
+	
+	int[] stackArray;
+	int top;
+	int stackSize;
+	
+	public MyStackImplementation(int size)
+	{
+		stackSize = size;
+		top = -1;
+		stackArray = new int[stackSize];
+	}
+	
+	public void push(int value)throws Exception
+	{
+		if(isStackFull())
+			throw new Exception("Stack is full");
+		this.stackArray[++top]=value;
+			
+	}
+	
+	public int pop()throws Exception
+	{
+		if(isStackEmpty())
+			throw new Exception("Stack is Empty");
+		int temp = stackArray[top];
+		top--;
+		return temp;
+	}
+	
+	public int peek() throws Exception
+	{
+		if(isStackEmpty())
+			throw new Exception("Stack is Empty");
+		return stackArray[top];
+	}
+	public boolean isStackFull()
+	{
+		return (top == stackSize-1);
+	}
+	public boolean isStackEmpty()
+	{
+		return (top == -1);
+	}
+	
+	public void display()
+	{
+		System.out.println("Top"+top);
+		for(int i=0;i<=top;i++)
+		{
+			System.out.print("\t"+stackArray[i]);
+		}
+	}
+	public static void main(String[] args)
+	{
+		MyStackImplementation obj = new MyStackImplementation(10);
+		try
+		{
+			obj.push(2);
+			obj.push(3);
+			obj.push(4);
+			obj.push(5);
+			obj.pop();
+			obj.peek();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		obj.display();
+		
+	}
+}

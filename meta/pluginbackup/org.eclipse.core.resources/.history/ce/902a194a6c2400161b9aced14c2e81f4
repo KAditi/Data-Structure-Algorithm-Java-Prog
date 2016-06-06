@@ -1,0 +1,27 @@
+package com.example.stack.problems;
+
+import java.util.StringTokenizer;
+
+public class EvaluateInfixExpression {
+	
+	public String evaluateInfix(String expression)
+	{
+		expression = expression.replaceAll("\\s+","");
+		MyGenericStack<String> newStack = new MyGenericStack<String>(expression.length());
+		StringTokenizer strTokenize = new StringTokenizer(expression,"{}()*+-/",true);
+		try{
+		while(strTokenize.hasMoreTokens())
+		{
+			String token = strTokenize.nextToken();
+			if(token == "(" || token == "{" || token == "[0-9]+"||token == "*"||token == "/" || token == "+" || token == "-")
+				newStack.push(token);
+		}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
+

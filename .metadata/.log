@@ -1,0 +1,184 @@
+!SESSION 2016-06-03 13:50:16.406 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:51:29.478
+!MESSAGE Error reading configuration: Unable to create lock manager.
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:51:29.483
+!MESSAGE Error saving on update
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:52:04.503
+!MESSAGE Error reading configuration: Unable to create lock manager.
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:52:04.505
+!MESSAGE Error saving on update
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:52:39.528
+!MESSAGE Error reading configuration: Unable to create lock manager.
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:52:39.530
+!MESSAGE Error saving on update
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:53:14.546
+!MESSAGE Error reading configuration: Unable to create lock manager.
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:53:14.547
+!MESSAGE Error saving on update
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:53:49.694
+!MESSAGE Error reading configuration: Unable to create lock manager.
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.osgi 4 0 2016-06-03 13:53:49.696
+!MESSAGE Error saving on update
+!STACK 0
+java.io.IOException: Unable to create lock manager.
+	at org.eclipse.osgi.storagemanager.StorageManager.open(StorageManager.java:703)
+	at org.eclipse.osgi.storage.Storage.getChildStorageManager(Storage.java:1768)
+	at org.eclipse.osgi.storage.Storage.save0(Storage.java:1038)
+	at org.eclipse.osgi.storage.Storage.save(Storage.java:1011)
+	at org.eclipse.osgi.internal.framework.StorageSaver$StorageSaverTask.run(StorageSaver.java:28)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-06-03 13:55:48.441
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Owner'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

@@ -1,0 +1,93 @@
+package com.example.binary.tree.operations;
+
+import java.util.ArrayList;
+import java.util.Stack;
+
+public class BTOperations {
+	
+	public BinaryTreeNode root;
+	
+	public void insertNode(int data)
+	{
+		BinaryTreeNode tempNode = new BinaryTreeNode(data);
+		BinaryTreeNode currNode;
+		
+		if(root == null)
+		{
+			root = tempNode;
+		}
+		else
+		{
+			currNode = root;
+			BinaryTreeNode parent;
+			while(true)
+			{
+				parent = currNode;
+				if(data < currNode.getData())
+				{
+					currNode = currNode.getLeft();
+					if(currNode == null)
+					{
+						parent.setLeft(tempNode);
+						return;
+					}
+				}
+				else
+				{
+					currNode = currNode.getRight();
+					if(currNode == null)
+					{
+						parent.setRight(tempNode);
+						return;
+					}
+				}
+				
+			}
+		}
+		
+	}
+	
+	public ArrayList<Integer> inorderNRTraversal(BinaryTreeNode root)
+	{
+		ArrayList<Integer> nodeVal = new ArrayList<Integer>();
+		Stack<BinaryTreeNode> stackNode = new Stack<BinaryTreeNode>();
+		BinaryTreeNode currNode = root;
+		boolean done = false;
+		if(root == null)
+		{
+			System.out.println("Tree is null");
+			return null;
+		}
+		
+		while(!done)
+		{
+			if(currNode!= null)
+			{
+				stackNode.push(currNode);
+				currNode = currNode.getLeft();
+			}
+			else
+			{
+				if(stackNode.isEmpty())
+				{
+					done = true;
+				}
+				else
+				{
+					currNode = stackNode.pop();
+					nodeVal.add(currNode.getData());
+					currNode = currNode.getRight();
+					
+				}
+			}
+			
+		}
+		return nodeVal;
+	}
+	
+	public static void main(String[] args)
+	{
+		
+	}
+
+}

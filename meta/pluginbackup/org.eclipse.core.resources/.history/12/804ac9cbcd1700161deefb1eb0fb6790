@@ -1,0 +1,20 @@
+package com.example.swap.node;
+
+import java.util.LinkedList;
+
+public class SwapKNode {
+
+	public void SwapKNode()
+	{
+		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		
+		linkedList.add(1);
+		linkedList.add(2);
+		linkedList.add(3);
+		linkedList.add(4);
+		linkedList.add(5);
+		linkedList.add(6);
+		linkedList.add(7);
+		linkedList.add(8);
+	}
+}

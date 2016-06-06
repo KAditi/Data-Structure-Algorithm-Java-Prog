@@ -1,0 +1,46 @@
+package com.example.priority.queue;
+
+public class PriorityQueueImpl {
+	
+	private Comparable[] priorityQueue;
+	private int index;
+	
+	public PriorityQueueImpl(int capacity)
+	{
+		priorityQueue = new Comparable[capacity];
+	}
+	public void insert(Comparable value)
+	{
+		if(index == priorityQueue.length)
+		{
+			System.out.println("Queue is full");
+			return;
+		}
+		priorityQueue[index] = value;
+		index++;
+		System.out.println("ELement added:\t"+value);
+	}
+	
+	public Comparable remove()
+	{
+		if(index == 0)
+		{
+			System.out.println("Queue is empty");
+			return null;
+		}
+		int maxInt = 0;
+		for(int i=0;i<index;i++)
+		{
+			if(priorityQueue[i].compareTo(priorityQueue[maxInt])>0)
+			{
+				maxInt = i;
+			}			
+		}
+		Comparable result = priorityQueue[maxInt];
+		index--;
+		priorityQueue[maxInt] = priorityQueue[index];
+		return result;
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.example.binary.tree.operations;
+
+public class BinaryTreeNode {
+
+}

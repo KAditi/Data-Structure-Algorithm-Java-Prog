@@ -1,0 +1,15 @@
+package com.example.queue.implementation;
+
+public class QueueImpl {
+
+	private int capacity;
+	int queArray[];
+	int front=0,rear = -1,currSize = 0;
+	
+	public QueueImpl(int size)
+	{
+		this.capacity = size;
+		queArray = new int[capacity];
+	}
+	
+}
