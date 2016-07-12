@@ -1,0 +1,20 @@
+package com.example.identical.tree;
+
+public class IdenticalTree {
+	
+	public boolean identicalTree(Node node1, Node node2)
+	{
+		if(node1 == null && node2 == null)
+			return true;
+		else if(node1 == null || node2 == null)
+			return false;
+		if(node1 != null && node2 != null)
+		{
+			return (node1.data == node2.data && identicalTree(node1.left, node2.left) && identicalTree(node1.right, node2.right));
+		}
+		else
+			return false;
+		
+	}
+
+}

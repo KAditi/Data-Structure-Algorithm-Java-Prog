@@ -1,0 +1,11 @@
+package com.example.tree.size;
+
+public class BinaryTreeSize {
+	
+	public Node root;
+	public int sizeOfTree(Node node)
+	{
+		
+	}
+
+}

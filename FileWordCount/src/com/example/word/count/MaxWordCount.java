@@ -74,9 +74,10 @@ public class MaxWordCount {
 	public static void main(String[] args) {
 		MaxWordCount object = new MaxWordCount();
 		Map<String,Integer> map = object.countWords("D:/mytest.txt");
-		List<Entry<String, Integer>> list = object.sortByValue(map);
+		//List<Entry<String, Integer>> list = object.sortByValue(map);
+		Set<Entry<String, Integer>> list = map.entrySet();
         for(Map.Entry<String, Integer> entry:list){
-            System.out.println(entry.getKey()+" ==== "+entry.getValue());
+            System.out.println(entry.getKey()+" :: "+entry.getValue());
         }
     
 	}
